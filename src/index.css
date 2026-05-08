@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #a7295a;
+  --on-primary: #ffffff;
+  --primary-container: #ff709f;
+  --on-primary-container: #4c0022;
+  --secondary: #883a97;
+  --on-secondary: #ffffff;
+  --secondary-container: #fabdff;
+  --on-secondary-container: #712481;
+  --tertiary: #246830;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #b4fdb4;
+  --on-tertiary-container: #1f632c;
+  --surface: #fff3f8;
+  --on-surface: #452340;
+  --surface-variant: #ffcef2;
+  --on-surface-variant: #764f6f;
+  --outline: #94698b;
+  --outline-variant: #ce9fc3;
+  --background: #fff3f8;
+  --card-radius: 3rem;
+  --card-radius-small: 1rem;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-secondary: var(--secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-tertiary: var(--tertiary);
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-background: var(--background);
+}
+
+@utility bubbly-shadow {
+  box-shadow: 0 20px 40px rgba(69, 35, 64, 0.06);
+}
+
+@utility asymmetric-card {
+  border-top-left-radius: var(--card-radius);
+  border-bottom-right-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius-small);
+  border-bottom-left-radius: var(--card-radius-small);
+}
+
+@utility glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--on-surface);
+  font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.font-headline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.bubbly-shadow {
+  box-shadow: 0 20px 40px rgba(69, 35, 64, 0.06);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.bubbly-button {
+  @apply active:scale-[0.96] transition-transform duration-200 rounded-full bubbly-shadow;
+}
