@@ -145,7 +145,7 @@ function App() {
   }
 
   return (
-    <PayPalScriptProvider options={{ "client-id": "test" }}>
+    <PayPalScriptProvider options={{ "client-id": "ARvt3iLeuyBIpVyBjEJURYElnCURz0Ku_aGt6_M6FbMjk1xdRRODRKvXgf6dLdNMijzV9qKSEwAhP6g4" }}>
     <div className="min-h-screen bg-background font-body selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
       {/* TopAppBar */}
       {activeTab !== 'workout' && (
